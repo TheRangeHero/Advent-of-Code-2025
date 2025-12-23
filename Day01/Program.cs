@@ -11,7 +11,7 @@ namespace Day01
             var input = reader.ReadLines("input.txt");
             var solver = new Solver();
             int task1 = solver.SolverTask1(input);
-
+            Console.WriteLine(solver.SolverTask1(input));
         }
     }
 
@@ -30,6 +30,8 @@ namespace Day01
         {
             int result = 0;
             int startPosition = 50;
+            int lowerDialLimit = 0;
+            int upperDialLimit = 99;
 
             char direction;
             int dialNum;
@@ -43,18 +45,34 @@ namespace Day01
                 {
                     case 'L':
                         startPosition -= dialNum;
+
+                        if (startPosition < lowerDialLimit)
+                        {
+                            startPosition = startPosition + 100;
+                            startPosition = Math.Abs(startPosition % 100);
+                        }
                         break;
                     case 'R':
                         startPosition += dialNum;
+
+                        if (startPosition > upperDialLimit)
+                        {
+                            startPosition = startPosition % 100;
+                        }
+
                         break;
                     default:
                         break;
                 }
 
+                if (startPosition == 0)
+                {
+                    result++;
+                }
 
             }
 
-            return 0;
+            return result;
         }
     }
 }
