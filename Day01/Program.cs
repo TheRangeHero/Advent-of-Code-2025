@@ -54,6 +54,7 @@ namespace Day01
                             {
                                 startPosition = 0;
                             }
+
                         }
                         break;
                     case 'R':
