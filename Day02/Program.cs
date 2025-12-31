@@ -45,6 +45,13 @@
                     {
                         continue;
                     }
+
+                    if (IDToCheck[0] == '0')
+                    {
+                        continue;
+                    }
+
+
                 }
 
             }

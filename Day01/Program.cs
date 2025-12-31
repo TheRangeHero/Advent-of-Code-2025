@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace Day01
+﻿namespace Day01
 {
     internal class Program
     {
@@ -8,7 +6,7 @@ namespace Day01
         {
             InputReader reader = new InputReader();
 
-            var input = reader.ReadLines("input.txt");
+            var input = reader.ReadLines("Input.txt");
             var solver = new Solver();
             Console.WriteLine(solver.SolverTask1(input));
         }
@@ -74,9 +72,7 @@ namespace Day01
                 {
                     result++;
                 }
-
             }
-
             return result;
         }
     }

@@ -8,17 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="input.txt" />
-    <None Remove="task.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="input.txt">
+    <None Update="Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
 
 </Project>
